@@ -22,8 +22,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupMap()
         setupCircle()
-        // Do any additional setup after loading the view.
+        setupMarker()
     }
+    
+    //MARK:- Custom Functions
     
     private func setupMap(){
         let camera = GMSCameraPosition.camera(withLatitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude), zoom: 16.0)
@@ -55,6 +57,8 @@ class ViewController: UIViewController {
             self.mapView.animate(with: update)
         }
     }
+    
+    //MARK:- IBActions
 
     @IBAction func sliderValueChanged(_ slider: UISlider) {
         let currentValue = Int(slider.value)
@@ -63,4 +67,13 @@ class ViewController: UIViewController {
     
 }
 
+// MARK:- Extensions
+extension ViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        let location: CLLocation = CLLocation(latitude: position.target.latitude, longitude: position.target.longitude)
+        print(location.coordinate.latitude)
+        print(location.coordinate.longitude)
+        
+    }
+}
 

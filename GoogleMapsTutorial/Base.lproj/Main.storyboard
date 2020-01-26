@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleMapsTutorial" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,6 +18,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mR-hF-hvR" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YCc-IQ-GsD"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmd-pV-V5Q">
                                 <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
@@ -36,13 +39,18 @@
                                     <constraint firstItem="Vh9-S0-huz" firstAttribute="centerY" secondItem="Wmd-pV-V5Q" secondAttribute="centerY" id="ZCO-iC-wlA"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center_point" translatesAutoresizingMaskIntoConstraints="NO" id="dJd-HW-nUb">
+                                <rect key="frame" x="198.5" y="444.5" width="17" height="17"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Wmd-pV-V5Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5BO-WP-Kn1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1mR-hF-hvR" secondAttribute="trailing" id="7Wq-K7-DHG"/>
                             <constraint firstItem="Wmd-pV-V5Q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="9P4-Qo-bl7"/>
+                            <constraint firstItem="dJd-HW-nUb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="9ua-J8-ZOG"/>
                             <constraint firstItem="1mR-hF-hvR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bJ1-qo-Yh4"/>
+                            <constraint firstItem="dJd-HW-nUb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dj1-HB-LjS"/>
                             <constraint firstItem="Wmd-pV-V5Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kYl-jd-aVE"/>
                             <constraint firstItem="1mR-hF-hvR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ok2-rf-gvG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wmd-pV-V5Q" secondAttribute="trailing" id="t6E-Y2-PSX"/>
@@ -60,4 +68,7 @@
             <point key="canvasLocation" x="139" y="100"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="center_point" width="16.666666030883789" height="16.666666030883789"/>
+    </resources>
 </document>
