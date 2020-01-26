@@ -19,18 +19,40 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmd-pV-V5Q">
+                                <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Vh9-S0-huz">
+                                        <rect key="frame" x="39.5" y="30" width="335" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="kDX-jH-9Xo"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Vh9-S0-huz" firstAttribute="width" secondItem="Wmd-pV-V5Q" secondAttribute="width" multiplier="0.8" id="SMw-RA-5UE"/>
+                                    <constraint firstItem="Vh9-S0-huz" firstAttribute="centerX" secondItem="Wmd-pV-V5Q" secondAttribute="centerX" id="W8P-Pl-CzJ"/>
+                                    <constraint firstItem="Vh9-S0-huz" firstAttribute="centerY" secondItem="Wmd-pV-V5Q" secondAttribute="centerY" id="ZCO-iC-wlA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Wmd-pV-V5Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5BO-WP-Kn1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1mR-hF-hvR" secondAttribute="trailing" id="7Wq-K7-DHG"/>
+                            <constraint firstItem="Wmd-pV-V5Q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="9P4-Qo-bl7"/>
                             <constraint firstItem="1mR-hF-hvR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bJ1-qo-Yh4"/>
+                            <constraint firstItem="Wmd-pV-V5Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kYl-jd-aVE"/>
                             <constraint firstItem="1mR-hF-hvR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ok2-rf-gvG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wmd-pV-V5Q" secondAttribute="trailing" id="t6E-Y2-PSX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1mR-hF-hvR" secondAttribute="bottom" id="yyd-a7-2ST"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="1mR-hF-hvR" id="PNb-ke-Kvg"/>
+                        <outlet property="slider" destination="Vh9-S0-huz" id="1Gm-Jg-wbT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
