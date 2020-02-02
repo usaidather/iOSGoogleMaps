@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1D2DFBB35F86BA2924182D8C /* Pods_GoogleMapsTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB3E74925DFF5640130680 /* Pods_GoogleMapsTutorial.framework */; };
 		5C097E49EFB82D90377C028A /* Pods_GoogleMapsTutorial_GoogleMapsTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5223D421C7095FEC072A807 /* Pods_GoogleMapsTutorial_GoogleMapsTutorialUITests.framework */; };
 		94DFE5F18002245C2440A984 /* Pods_GoogleMapsTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311FB8A0ED1747E49516157E /* Pods_GoogleMapsTutorialTests.framework */; };
+		FA1DF48023E6FD9900293DC6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DF47F23E6FD9900293DC6 /* Location.swift */; };
 		FA77F4E223DDAA60008C2E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77F4E123DDAA60008C2E38 /* AppDelegate.swift */; };
 		FA77F4E423DDAA60008C2E38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77F4E323DDAA60008C2E38 /* SceneDelegate.swift */; };
 		FA77F4E623DDAA60008C2E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77F4E523DDAA60008C2E38 /* ViewController.swift */; };
@@ -47,6 +48,8 @@
 		AD95986D27EE634ADBE35843 /* Pods-GoogleMapsTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTutorial.release.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTutorial/Pods-GoogleMapsTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		C4BB3E74925DFF5640130680 /* Pods_GoogleMapsTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5223D421C7095FEC072A807 /* Pods_GoogleMapsTutorial_GoogleMapsTutorialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsTutorial_GoogleMapsTutorialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1DF47E23E6FB9200293DC6 /* GoogleMapsTutorial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleMapsTutorial-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA1DF47F23E6FD9900293DC6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FA77F4DE23DDAA60008C2E38 /* GoogleMapsTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMapsTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA77F4E123DDAA60008C2E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA77F4E323DDAA60008C2E38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				FA77F4EA23DDAA61008C2E38 /* Assets.xcassets */,
 				FA77F4EC23DDAA61008C2E38 /* LaunchScreen.storyboard */,
 				FA77F4EF23DDAA61008C2E38 /* Info.plist */,
+				FA1DF47E23E6FB9200293DC6 /* GoogleMapsTutorial-Bridging-Header.h */,
+				FA1DF47F23E6FD9900293DC6 /* Location.swift */,
 			);
 			path = GoogleMapsTutorial;
 			sourceTree = "<group>";
@@ -165,7 +170,6 @@
 				677673AA0B3A87DCB6D04F4B /* Pods-GoogleMapsTutorialTests.debug.xcconfig */,
 				AB8FA9595BD5525EF8DB8A17 /* Pods-GoogleMapsTutorialTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -410,6 +414,7 @@
 			files = (
 				FA77F4E623DDAA60008C2E38 /* ViewController.swift in Sources */,
 				FA77F4E223DDAA60008C2E38 /* AppDelegate.swift in Sources */,
+				FA1DF48023E6FD9900293DC6 /* Location.swift in Sources */,
 				FA77F4E423DDAA60008C2E38 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

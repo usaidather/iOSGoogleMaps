@@ -8,6 +8,8 @@ target 'GoogleMapsTutorial' do
   # Pods for GoogleMapsTutorial
  pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Google-Maps-iOS-Utils'
+
 
   target 'GoogleMapsTutorialTests' do
     inherit! :search_paths
