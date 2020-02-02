@@ -18,8 +18,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        styleGoogleMaps()
         setupMap()
         // Do any additional setup after loading the view.
+    }
+    
+    private func styleGoogleMaps(){
+        do{
+            if let styleUrl = Bundle.main.url(forResource: "style", withExtension: "json"){
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleUrl)
+            }
+            else{
+                NSLog("unable to find style file")
+            }
+        } catch {
+            NSLog("failed to load")
+        }
+        
     }
     
     private func setupMap(){
