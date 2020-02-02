@@ -67,6 +67,7 @@ class ViewController: UIViewController {
     }
     
     private func setupMap(){
+        
         let camera = GMSCameraPosition.camera(withLatitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude), zoom: 3.0)
         mapView.camera = camera
     }
